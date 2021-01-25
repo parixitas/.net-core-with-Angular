@@ -1,0 +1,30 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "allowJs": true,
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [ "es5", "es6", "es2017", "dom" ],
+    //"lib": [
+    //  "es2017",
+    //  "dom"
+    //],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "target": "es6",
+    "typeRoots": [
+      "node_modules/@types"
+    ]
+
+  },
+  "exclude": [
+    "client",
+    "node_modules",
+    "typings/browser",
+    "typings/browser.d.ts"
+  ]
+}

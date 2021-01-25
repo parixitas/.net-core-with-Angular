@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+  <div class="body-content">
+    <div class='row'>
+      <div class='col-sm-3'>
+        <app-nav-menu></app-nav-menu>
+      </div>
+      <div class='col-sm-9 body-content'>
+
+          <h1>Employee Data</h1>
+          <p>This component demonstrates fetching Employee data from the server.</p>
+          <p *ngIf="!emplist"><em>Loading...</em></p>
+          <p>
+            <a [routerLink]="['/regester-employee']">Create New</a>
+          </p>
+          <table class='table' *ngIf="emplist">
+            <thead>
+              <tr>
+                <th>Employee Code</th>
+                <th>Name</th>
+                <th>City</th>
+                <th>Email</th>
+                <th>Department</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let emp of emplist">
+                <td>{{ emp.empcode }}</td>
+                <td>{{ emp.name }}</td>
+                <td>{{ emp.city }}</td>
+                <td>{{ emp.email }}</td>
+                <td>{{ emp.dept }}</td>
+                <td>
+                <td>
+                  <a [routerLink]="['/employee/edit_employee/', emp.empcode]">Edit</a> |
+                  <a [routerLink]="" (click)="delete(emp.empcode)">Delete</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+ 
+      </div>
+      </div>
+    </div>
+</body>
+</html>
